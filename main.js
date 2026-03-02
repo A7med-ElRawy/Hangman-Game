@@ -151,10 +151,11 @@ loadData().then(({ randomCategory, randomWord }) => {
 
     // Add Class On Div
     div.className = "popup";
-    div.appendChild(button);
+    button.className="btn";
 
     // Append To The Body
     document.body.appendChild(div);
+    document.body.appendChild(button);
   }
 
   function winGame() {
@@ -188,14 +189,15 @@ loadData().then(({ randomCategory, randomWord }) => {
 
     // Append Text To Div
     div.appendChild(divText);
-    div.appendChild(button);
     // Add Class On Div
     div.className = "popup-win";
-
+    button.className="btn";
     // Append To The Body
     document.body.appendChild(div);
+    document.body.appendChild(button);
   }
 });
+
 
 
 
