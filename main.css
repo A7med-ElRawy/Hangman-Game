@@ -254,3 +254,13 @@ hr {
   border: 1px solid #ccc;
   font-size: 40px;
 }
+
+.popup-win button{
+  wdith: 100px;
+  height: 70px;
+  border-radius: 7px;
+  text-align:center;
+  background-color:white;
+  color: #00968;
+}
+  
