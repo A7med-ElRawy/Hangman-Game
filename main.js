@@ -139,7 +139,7 @@ loadData().then(({ randomCategory, randomWord }) => {
   function endGame() {
     // Create Popup Div
     let div = document.createElement("div");
-    let button=document.creatElement("button");
+    let button=document.createElement("button");
     button.appendChild(document.createTextNode("Agin :)"))
     // Create Text
     let divText = document.createTextNode(
@@ -160,7 +160,7 @@ loadData().then(({ randomCategory, randomWord }) => {
   function winGame() {
     let div = document.createElement("div");
     let divText; // define it once outside the conditions
-    let button=document.creatElement("button");
+    let button=document.createElement("button");
     button.appendChild(document.createTextNode("Agin :)"))
 
     // Create Text based on number of mistakes
@@ -196,5 +196,6 @@ loadData().then(({ randomCategory, randomWord }) => {
     document.body.appendChild(div);
   }
 });
+
 
 
