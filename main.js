@@ -158,6 +158,8 @@ loadData().then(({ randomCategory, randomWord }) => {
   function winGame() {
     let div = document.createElement("div");
     let divText; // define it once outside the conditions
+    let button=document.creatElement("button");
+    button.appendChild(document.createTextNode("Agin :)"))
 
     // Create Text based on number of mistakes
     if (wrong >= 6 && wrong <= 7) {
@@ -184,7 +186,7 @@ loadData().then(({ randomCategory, randomWord }) => {
 
     // Append Text To Div
     div.appendChild(divText);
-
+    div.appendChild(button);
     // Add Class On Div
     div.className = "popup-win";
 
@@ -192,3 +194,4 @@ loadData().then(({ randomCategory, randomWord }) => {
     document.body.appendChild(div);
   }
 });
+
