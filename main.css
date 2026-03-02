@@ -263,4 +263,13 @@ hr {
   background-color:white;
   color: #00968;
 }
+.popup button{
+  wdith: 100px;
+  height: 70px;
+  border-radius: 7px;
+  text-align:center;
+  background-color:white;
+  color: #00968;
+}
   
+
