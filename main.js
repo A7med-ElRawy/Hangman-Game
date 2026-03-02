@@ -139,7 +139,8 @@ loadData().then(({ randomCategory, randomWord }) => {
   function endGame() {
     // Create Popup Div
     let div = document.createElement("div");
-
+    let button=document.creatElement("button");
+    button.appendChild(document.createTextNode("Agin :)"))
     // Create Text
     let divText = document.createTextNode(
       `Game Over, The Word Is ${randomPro.toUpperCase()}`
@@ -150,6 +151,7 @@ loadData().then(({ randomCategory, randomWord }) => {
 
     // Add Class On Div
     div.className = "popup";
+    div.appendChild(button);
 
     // Append To The Body
     document.body.appendChild(div);
@@ -194,4 +196,5 @@ loadData().then(({ randomCategory, randomWord }) => {
     document.body.appendChild(div);
   }
 });
+
 
