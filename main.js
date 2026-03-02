@@ -198,6 +198,11 @@ loadData().then(({ randomCategory, randomWord }) => {
   }
 });
 
+document.querySelector(".btn").addEventListener("click", () => {
+    window.location.reload();
+  });
+
+
 
 
 
