@@ -139,70 +139,75 @@ loadData().then(({ randomCategory, randomWord }) => {
   function endGame() {
     // Create Popup Div
     let div = document.createElement("div");
-    let button=document.createElement("button");
-    button.appendChild(document.createTextNode("Agin :)"))
+    let prog = document.createElement("p");
+    let button = document.createElement("button");
+    button.appendChild(document.createTextNode("Play Again"));
+    button.className = "btn";
     // Create Text
     let divText = document.createTextNode(
-      `Game Over, The Word Is ${randomPro.toUpperCase()}`
+      `Game Over, The Word Is ${randomPro.toUpperCase()}`,
     );
 
     // Append Text To Div
-    div.appendChild(divText);
+    prog.appendChild(divText);
+    div.appendChild(prog);
+    div.appendChild(button);
 
     // Add Class On Div
     div.className = "popup";
-    button.className="btn";
 
     // Append To The Body
     document.body.appendChild(div);
-    document.body.appendChild(button);
+    setTimeout(() => {
+      let buttonEvent = button.addEventListener("click", () => {
+        location.reload();
+      });
+    }, 0);
   }
 
   function winGame() {
     let div = document.createElement("div");
+    let prog = document.createElement("p");
     let divText; // define it once outside the conditions
-    let button=document.createElement("button");
-    button.appendChild(document.createTextNode("Agin :)"))
+    let button = document.createElement("button");
+    button.appendChild(document.createTextNode("Play Again"));
+    button.className = "btn";
 
     // Create Text based on number of mistakes
     if (wrong >= 6 && wrong <= 7) {
       divText = document.createTextNode(
-        `Congratulations, the word is ${randomPro.toUpperCase()} — You are a 😅 Barely Made It`
+        `Congratulations, the word is ${randomPro.toUpperCase()} — You are a 😅 Barely Made It`,
       );
     } else if (wrong >= 4 && wrong <= 5) {
       divText = document.createTextNode(
-        `Congratulations, the word is ${randomPro.toUpperCase()} — You are a 😊 Average Player`
+        `Congratulations, the word is ${randomPro.toUpperCase()} — You are a 😊 Average Player`,
       );
     } else if (wrong >= 2 && wrong <= 3) {
       divText = document.createTextNode(
-        `Congratulations, the word is ${randomPro.toUpperCase()} — You are a 🔥 Very Smart`
+        `Congratulations, the word is ${randomPro.toUpperCase()} — You are a 🔥 Very Smart`,
       );
     } else if (wrong === 1) {
       divText = document.createTextNode(
-        `Congratulations, the word is ${randomPro.toUpperCase()} — You are a 💎 Pro`
+        `Congratulations, the word is ${randomPro.toUpperCase()} — You are a 💎 Pro`,
       );
     } else if (wrong === 0) {
       divText = document.createTextNode(
-        `Congratulations, the word is ${randomPro.toUpperCase()} — You are a 🏆 Legend`
+        `Congratulations, the word is ${randomPro.toUpperCase()} — You are a 🏆 Legend`,
       );
     }
 
     // Append Text To Div
-    div.appendChild(divText);
+    prog.appendChild(divText);
+    div.appendChild(prog);
     // Add Class On Div
+    div.appendChild(button);
     div.className = "popup-win";
-    button.className="btn";
     // Append To The Body
     document.body.appendChild(div);
-    document.body.appendChild(button);
+    setTimeout(() => {
+      var buttonEvent = button.addEventListener("click", () => {
+        location.reload();
+      });
+    }, 0);
   }
 });
-
-document.querySelector(".btn").addEventListener("click", () => {
-    window.location.reload();
-  });
-
-
-
-
-

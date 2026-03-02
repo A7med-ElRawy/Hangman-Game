@@ -6,7 +6,7 @@ body {
 }
 .container {
   margin: 20px auto;
-  width: 1000px;
+  width: 80%;
 }
 .row {
   display: flex;
@@ -255,20 +255,15 @@ hr {
   font-size: 40px;
 }
 
-.btn{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  wdith: 100px;
-  height: 70px;
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background-color: #fff;
+  color: #009688;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
   border-radius: 7px;
-  text-align:center;
-  background-color:white;
-  color: #00968;
-  z-index:1000;
 }
-
-  
-
-
