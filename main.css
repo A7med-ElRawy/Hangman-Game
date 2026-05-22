@@ -267,3 +267,15 @@ hr {
   cursor: pointer;
   border-radius: 7px;
 }
+@media only screen and (max-width: 480px) {
+  .row{
+    flex-direction: column;
+  }
+  .hangman-draw{
+    flex:0;  
+  }
+  .letters-guess span{
+    width: 20px;
+    height: 80px;
+  }
+}
